@@ -7,35 +7,29 @@
   <body>
     <header class="main-header">
       <nav class="main-navgation">
-        <a class="main-header-logo">
-          <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
-        <a>
+        <a class="main-header-logo" href="index.html">
+          <img src="img/index-logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+        </a>
         <ul class="site--navigation">
           <li><a href="info.html">Информация</a></li>
-          <li><a href="info.html">Новости</a></li>
-          <li><a href="info.html">Прайс-лист</a></li>
-          <li><a href="info.html">Магазин</a></li>
-          <li><a href="info.html">Контакты</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li class="site-navigation-current"><a href="price.html">Прайс-лист</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login-link">Вход</li>
+          <li><a  class="login-link" href="login.html">Вход</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="inner">
+    <main class="container">
       <div class="container">
         <h1 class="content-title">Прайс-лист</h1>
-        <nav class="breadcrumbs">
-          <ul>
-            <li>
-              <a href="index.html">Главная</a>
-            </li>
-            <li>
-              Прайс-лист
-            </li>
-          </ul>
-	      </nav>
+        <ul class="bredcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs-current">Прайс-лист</li>
+        </ul>
 
         <div class="price-content">
           <div class="big-heading">
@@ -94,7 +88,7 @@
       <p class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-          <a href="map.html">Как нас найти</a><br>
+          <a href="map.html">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
       </p>
       <div class="footer-social">
@@ -115,13 +109,35 @@
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
-      <!--Здесь будет форма-->
-      <span class="modal-close">x</span>
+      <!--форма-модальное окно-->
+      <form class="login-form" action="htths://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <p class="login-passford-info">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" type="sumit">Закрыть</button>
     </section>
-
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <p>
+        <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул.
+        Большая Конюшенная 19/8, г. Санкт-Петербург">
+      </p>
+      <button class="modal-close" type="button">Закрыть карту</button>
     </section>
 
 
